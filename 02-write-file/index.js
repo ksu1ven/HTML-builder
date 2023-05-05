@@ -16,7 +16,7 @@ fs.access(path.join(__dirname, 'mynotes.txt'), fs.F_OK, (err) => {
 
 stdout.write('Введите, пожалуйста, текст.\n');
 stdin.on('data', data => {
-  if(data.toString()=='exit\r\n') {process.exit();} else {
+  if(data.toString().trim()==='exit') {process.exit();} else {
     fs.appendFile(
       path.join(__dirname, 'mynotes.txt'),
       data,
