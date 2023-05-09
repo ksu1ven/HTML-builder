@@ -17,7 +17,7 @@ fs.readdir(folder, {withFileTypes: true}, (err, files) => {
           return;
         }
         const size=stats.size;
-        console.log(`${name} - ${ext} - ${size}kb`  );
+        console.log(`${name} - ${ext} - ${size}b`  );
       });             
     }      
   });
