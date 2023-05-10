@@ -12,7 +12,7 @@ function start(){
       );
     }
     fs.readdir(path.join(__dirname, 'files-copy'), (err, files) => {
-      if (files.length>0){
+      if (files){
         files.forEach((file) => {
           fs.access(path.join(__dirname, 'files', file),  fs.F_OK, (err) => {
             if (err) {
